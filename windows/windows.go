@@ -72,7 +72,7 @@ func (runner *runner) GetInterfaces() ([]NetworkInterface, error) {
 		if err != nil {
 			continue
 		}
-		spew.Dump(NetInterface)
+
 		if s == uint64(1) {
 			NetInterface.DhcpEnabled = true
 			s, _, err := k.GetStringsValue("DhcpDefaultGateway")
@@ -162,6 +162,7 @@ func (runner *runner) GetInterfaces() ([]NetworkInterface, error) {
 		if err != nil {
 			log.Println(err)
 		}
+		spew.Dump(NetInterface)
 		NetworkInterfaces = append(NetworkInterfaces, *NetInterface)
 	}
 
