@@ -4,7 +4,7 @@ package godnschange
 import (
 	"fmt"
 
-	"github.com/inverse-inc/go-dnschange/windows"
+	"github.com/fdurand/go-dnschange/windows"
 	"github.com/jackpal/gateway"
 )
 

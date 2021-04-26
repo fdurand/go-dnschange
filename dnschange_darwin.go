@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/inverse-inc/go-dnschange/darwin"
+	"github.com/fdurand/go-dnschange/darwin"
 	"github.com/jackpal/gateway"
 )
 
