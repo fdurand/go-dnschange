@@ -98,8 +98,10 @@ func (runner *runner) GetInterfaces() ([]NetworkInterface, error) {
 				NetInterface.IPAddress = net.ParseIP(t)
 			}
 			t, _, err = k.GetStringValue("NameServer")
+			spew.Dump(t)
 			if err != nil || len(t) == 0 {
 				t, _, err = k.GetStringValue("DhcpNameServer")
+				spew.Dump(t)
 				if err != nil {
 					log.Println(err)
 				} else {
