@@ -6,6 +6,7 @@ import (
 	"net"
 	"strings"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/google/uuid"
 	"golang.org/x/sys/windows/registry"
 )
@@ -71,6 +72,7 @@ func (runner *runner) GetInterfaces() ([]NetworkInterface, error) {
 		if err != nil {
 			continue
 		}
+		spew.Dump(NetInterface)
 		if s == uint64(1) {
 			NetInterface.DhcpEnabled = true
 			s, _, err := k.GetStringsValue("DhcpDefaultGateway")
