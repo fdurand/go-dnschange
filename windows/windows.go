@@ -69,7 +69,9 @@ func (runner *runner) GetInterfaces() ([]NetworkInterface, error) {
 		}
 		defer k.Close()
 		s, _, err := k.GetIntegerValue("EnableDHCP")
+		spew.Dump(s)
 		if err != nil {
+			spew.Dump("Exit")
 			continue
 		}
 
